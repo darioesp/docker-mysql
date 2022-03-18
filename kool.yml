@@ -1,2 +1,6 @@
 scripts:
-  mysqld: kool exec -e MYSQL_PWD=$DB_PASSWORD -u $DB_USERNAME $DB_DATABASE
+  bash: docker exec -it dockermysql_db_1 bash
+  mysqlimp: docker exec -i dockermysql_db_1 sh -c 'exec mysql -uroot -p$DB_PASSWORD $db' < $pathimp
+  mysqlexp: docker exec -it dockermysql_db_1 sh -c 'exec mysql -uroot -p$DB_PASSWORD $db' > $pathexp
+  setup:
+  - kool run mysqld
