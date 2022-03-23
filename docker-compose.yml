@@ -1,6 +1,7 @@
 version: '3.9'
 services:
   db:
+    platform: ${APP_PLATAFORM}
     image: mysql
     cap_add:
       - SYS_NICE
