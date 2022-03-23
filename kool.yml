@@ -1,5 +1,6 @@
 scripts:
   bash: docker exec -it dockermysql_db_1 bash
+  mysqlCDB: docker exec -i dockermysql_db_1 sh -c 'exec mysql -uroot -p$DB_PASSWORD' -e "create database `$db`;"
   mysqlimp: docker exec -i dockermysql_db_1 sh -c 'exec mysql -uroot -p$DB_PASSWORD $db' < $pathimp
   mysqlexp: docker exec -it dockermysql_db_1 sh -c 'exec mysql -uroot -p$DB_PASSWORD $db' > $pathexp
   setup:
