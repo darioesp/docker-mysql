@@ -44,4 +44,3 @@ pathexp=/Users/juanito/path/db.sql
 |mysqlCDB| Crear db en el contenedor|
 |mysqlimp| Importar db en el contenedor|
 |mysqlexp| Exportar db en el contenedor|
-|setup| |
