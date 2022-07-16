@@ -9,12 +9,12 @@ Se recomienda instalar posteriormente una aplicación para conectarte con mysql 
 | Sequel Pro |[Descargar](https://sequelpro.com/download#auto-start) |
 
 ## Instalemos MYSQL
-Antes de nada deberos contar con docker instalado en nuestra maquina descargar lo [aquí](https://www.docker.com/products/docker-desktop/).
+Antes de nada deberos contar con docker instalado en nuestra maquina descargalo [aquí](https://www.docker.com/products/docker-desktop/).
 
 Ahora desde el path raíz (.) de nuestro repo ejecutaremos este comando:
 
 ```zsh
-docker-compose -up -d
+docker-compose up -d
 ```
 
 A continuación te dejo la manera de levantar tu conexión con el contenedor, configurando el acceso con estas credenciales:
