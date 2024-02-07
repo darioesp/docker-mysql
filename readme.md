@@ -1,7 +1,7 @@
 # **MYSQL Docker**
 Este es un contenedor base para correr mysql en tu local de manera sencilla.
 
-Antes de nada deberos contar con docker instalado en nuestra maquina descargalo [aquí](https://www.docker.com/products/docker-desktop/).
+Antes de nada deberos contar con docker instalado en nuestra maquina descargalo, [aquí](https://www.docker.com/products/docker-desktop/).
 
 ## **Recomendaciones**
 Se recomienda instalar posteriormente una aplicación para conectarte con mysql desde tu local, recomiendo alternativas como:
@@ -40,6 +40,19 @@ docker-compose up -d
 # **Amante de la terminal**
 Te recomiendo instalarte [kool](https://kool.dev/docs/getting-started/installation), posterior a eso mírate 👀 el archivo kool.yml donde encontraras comandos cortos para realizar tareas simples de exportación, migración y creación de base de datos.
 
+## Preparemos nuestra variables para los run:
+Para exportar scripts sql por terminal usando kool run [ mysqlimp | mysqlexp ]
+
+```bash
+# Name db
+db=name_database
+# db import
+pathimp=/Users/juanito/path/db.sql
+# db export
+pathexp=/Users/juanito/path/db.sql
+```
+👨🏻‍💻 Ya estas listo para correr los comandos en terminal
+
 |Comando|Descripción|
 |-|-|
 |`kool run bash`| Conectarnos por bash al contenedor |
@@ -47,16 +60,5 @@ Te recomiendo instalarte [kool](https://kool.dev/docs/getting-started/installati
 |`kool run mysql-imp`| Importar db en el contenedor|
 |`kool run mysql-exp`| Exportar db en el contenedor|
 
-Preparemos nuestra variables para los run:
 
-```bash
-# Para exportar sql scripts por terminal usando kool run [mysqlimp/mysqlexp]
-
-# name db
-db=fixu_soler
-# db import
-pathimp=/Users/juanito/path/db.sql
-# db export
-pathexp=/Users/juanito/path/db.sql
-```
 
